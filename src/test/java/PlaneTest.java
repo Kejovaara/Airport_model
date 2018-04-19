@@ -68,7 +68,7 @@ public class PlaneTest {
     }
 
     @Test
-    public void checkPassengerHasCorrectTicket__true(){
+    public void checkPassengerHasCorrectTicket(){
         assertEquals(false, plane.checkPassengerHasCorrectTicketForPlane(passenger1));
     }
 

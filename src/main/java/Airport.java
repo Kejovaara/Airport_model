@@ -10,7 +10,7 @@ public class Airport {
     public Airport(String name, ArrayList<Plane> fleet, int maxPlanes){
     this.name =name;
     this.fleet = fleet;
-    this.maxPlanes =maxPlanes;
+    this.maxPlanes = maxPlanes;
     this.tourists = new ArrayList<>();
     }
 
@@ -20,6 +20,17 @@ public class Airport {
 
     public int getNumberOfPlanesInFleet(){
         return fleet.size();
+    }
+
+    public void planeLeaveAirport(Plane plane){
+        fleet.remove(plane);
+    }
+
+    public void planeArrivesAtAirport(Plane plane){
+        if (fleet.size() < maxPlanes) {
+        fleet.add(plane);} else {
+            System.out.println("Your airport is full!");
+        }
     }
 
 }
