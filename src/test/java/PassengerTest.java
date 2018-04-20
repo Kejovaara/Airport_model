@@ -22,8 +22,8 @@ public class PassengerTest {
         passenger1 = new Passenger(10,"Simon");
         passenger2 = new Passenger(8,"Aileen");
         ArrayList<Ticket> tickets = new ArrayList<>();
-        ticket1 = new Ticket(Destination.MAGALUF);
-        ticket2 = new Ticket(Destination.IBIZA);
+        ticket1 = new Ticket(Destination.MAGALUF, 80.0);
+        ticket2 = new Ticket(Destination.IBIZA, 75.0);
         tickets.add(ticket1);
         tickets.add(ticket2);
         ticketDesk = new TicketDesk(tickets);

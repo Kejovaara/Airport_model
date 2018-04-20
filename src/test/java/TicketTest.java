@@ -12,8 +12,8 @@ public class TicketTest {
 
     @Before
     public void before() {
-        ticket1 = new Ticket(Destination.MAGALUF);
-        ticket2 = new Ticket(Destination.IBIZA);
+        ticket1 = new Ticket(Destination.MAGALUF, 90.0);
+        ticket2 = new Ticket(Destination.IBIZA, 85.0);
     }
 
     @Test

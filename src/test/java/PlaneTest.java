@@ -19,7 +19,7 @@ public class PlaneTest {
     public void before(){
         plane = new Plane(2, Destination.TENERIFE);
         passenger1 = new Passenger(0,"Jean-Jacques");
-        ticket1 = new Ticket(Destination.MAGALUF);
+        ticket1 = new Ticket(Destination.MAGALUF, 100.0);
         passenger1.addATicket(ticket1);
         passenger2 = new Passenger(10,"Saddam");
         passenger3 = new Passenger(5,"Gaddafi");

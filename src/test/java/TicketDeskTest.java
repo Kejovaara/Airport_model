@@ -14,8 +14,8 @@ public class TicketDeskTest {
 
     @Before
     public void before(){
-        Ticket ticket1 = new Ticket(Destination.IBIZA);
-        Ticket ticket2 = new Ticket(Destination.TENERIFE);
+        Ticket ticket1 = new Ticket(Destination.IBIZA, 90.0);
+        Ticket ticket2 = new Ticket(Destination.TENERIFE, 75.0);
         ArrayList<Ticket> tickets = new ArrayList<>();
         tickets.add(ticket1);
         tickets.add(ticket2);
