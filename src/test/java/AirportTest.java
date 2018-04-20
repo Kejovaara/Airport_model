@@ -1,3 +1,6 @@
+import Airport.Airport;
+import Airport.Plane;
+import Airport.Destination;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,6 +15,7 @@ public class AirportTest {
     private Plane plane3;
     private Plane plane4;
     private Plane plane5;
+    private Plane plane6;
     private Airport airport1;
 
     @Before
@@ -21,6 +25,7 @@ public class AirportTest {
         plane3 = new Plane(5, Destination.MAGALUF);
         plane4 = new Plane(5, Destination.BENIDORM);
         plane5 = new Plane(5, Destination.BENIDORM);
+        plane6 = new Plane(5, Destination.TENERIFE);
         ArrayList<Plane> fleet = new ArrayList<>();
         fleet.add(plane1);
         fleet.add(plane2);
@@ -53,6 +58,7 @@ public class AirportTest {
     @Test
     public void airportIsFull(){
         airport1.planeArrivesAtAirport(plane5);
+        airport1.planeArrivesAtAirport(plane6);
         assertEquals(4, airport1.getNumberOfPlanesInFleet());
     }
 

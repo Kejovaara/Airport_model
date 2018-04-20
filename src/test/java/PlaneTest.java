@@ -1,18 +1,19 @@
+import Airport.Destination;
+import Airport.Person.Passenger;
+import Airport.Plane;
+import Airport.Ticket;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 import static junit.framework.TestCase.assertEquals;
 
 public class PlaneTest {
 
-    private Plane plane;
+    Plane plane;
     private Passenger passenger1;
     private Passenger passenger2;
     private Passenger passenger3;
-    private Ticket ticket1;
+    Ticket ticket1;
 
     @Before
     public void before(){

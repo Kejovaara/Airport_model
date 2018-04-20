@@ -1,3 +1,6 @@
+import Airport.Destination;
+import Airport.Ticket;
+import Airport.TicketDesk;
 import org.junit.Before;
 import org.junit.Test;
 

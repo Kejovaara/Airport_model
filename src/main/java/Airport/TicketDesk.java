@@ -1,3 +1,8 @@
+package Airport;
+
+import Airport.Destination;
+import Airport.Ticket;
+
 import java.util.ArrayList;
 
 public class TicketDesk {

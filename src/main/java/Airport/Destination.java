@@ -1,3 +1,5 @@
+package Airport;
+
 public enum Destination {
 
     TENERIFE("Tenerife"),

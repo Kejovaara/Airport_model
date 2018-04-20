@@ -1,3 +1,7 @@
+package Airport;
+
+import Airport.Destination;
+
 public class Ticket {
 
     private Destination destination;
