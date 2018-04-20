@@ -1,6 +1,6 @@
 package Airport;
 
-public enum LuggageItem {
+public enum LuggageType {
 
     SMALL(10),
     MEDIUM(15),
@@ -8,7 +8,7 @@ public enum LuggageItem {
 
     private final int weight;
 
-    LuggageItem(int weight){
+    LuggageType(int weight){
         this.weight = weight;
     }
 

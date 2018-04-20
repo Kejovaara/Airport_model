@@ -6,12 +6,14 @@ import Airport.TicketDesk;
 
 import java.util.ArrayList;
 
-public class Passenger {
+public class Passenger extends Person{
 
     private String name;
     private ArrayList<Ticket> travelWallet;
+    private int drunkeness;
 
-    public Passenger(String name) {
+    public Passenger(int drunkeness, String name) {
+        super(drunkeness);
         this.name = name;
         this.travelWallet = new ArrayList<>();
     }

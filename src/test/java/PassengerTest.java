@@ -19,8 +19,8 @@ public class PassengerTest {
 
     @Before
     public void before() {
-        passenger1 = new Passenger("Simon");
-        passenger2 = new Passenger("Aileen");
+        passenger1 = new Passenger(10,"Simon");
+        passenger2 = new Passenger(8,"Aileen");
         ArrayList<Ticket> tickets = new ArrayList<>();
         ticket1 = new Ticket(Destination.MAGALUF);
         ticket2 = new Ticket(Destination.IBIZA);

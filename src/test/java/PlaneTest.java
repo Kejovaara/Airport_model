@@ -18,11 +18,11 @@ public class PlaneTest {
     @Before
     public void before(){
         plane = new Plane(2, Destination.TENERIFE);
-        passenger1 = new Passenger("Jean-Jacques");
+        passenger1 = new Passenger(0,"Jean-Jacques");
         ticket1 = new Ticket(Destination.MAGALUF);
         passenger1.addATicket(ticket1);
-        passenger2 = new Passenger("Saddam");
-        passenger3 = new Passenger("Gaddafi");
+        passenger2 = new Passenger(10,"Saddam");
+        passenger3 = new Passenger(5,"Gaddafi");
     }
 
 
