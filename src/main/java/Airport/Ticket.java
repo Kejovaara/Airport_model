@@ -1,8 +1,9 @@
 package Airport;
 
 import Airport.Destination;
+import Airport.Interfaces.IBuyable;
 
-public class Ticket {
+public class Ticket implements IBuyable {
 
     private double cost;
     private Destination destination;
@@ -12,8 +13,12 @@ public class Ticket {
         this.cost = cost;
     }
 
-    public Destination whatIsDestination(){
+    public Destination getDestination(){
         return this.destination;
+    }
+
+    public double getCost(){
+        return this.cost;
     }
 
 }

@@ -1,3 +1,5 @@
+import Airport.Consumables.Coffee;
+import Airport.Consumables.Sandwich;
 import Airport.Destination;
 import Airport.Person.Passenger;
 import Airport.Ticket;
@@ -16,9 +18,14 @@ public class PassengerTest {
     private Ticket ticket1;
     private Ticket ticket2;
     private TicketDesk ticketDesk;
+    private Coffee coffee1;
+    private Sandwich sandwich1;
+
 
     @Before
     public void before() {
+        coffee1 = new Coffee("Americano", -5, 2, false);
+        sandwich1 = new Sandwich("BLT", -4, 2, false);
         passenger1 = new Passenger(10,"Simon");
         passenger2 = new Passenger(8,"Aileen");
         ArrayList<Ticket> tickets = new ArrayList<>();
@@ -31,7 +38,7 @@ public class PassengerTest {
 
     @Test
     public void passengerHasName(){
-        assertEquals("Simon", passenger1.whatIsName());
+        assertEquals("Simon", passenger1.getName());
     }
 
     @Test
@@ -41,7 +48,7 @@ public class PassengerTest {
 
     @Test
     public void canAddTicketToWallet(){
-        passenger1.addATicket(ticket1);
+        passenger1.addTicket(ticket1);
         assertEquals(1, passenger1.howManyTicketsInWallet());
     }
 
@@ -49,13 +56,29 @@ public class PassengerTest {
     public void canBuyTicket(){
         passenger1.buyTicket(Destination.MAGALUF, ticketDesk);
         assertEquals(1, passenger1.howManyTicketsInWallet());
-        assertEquals(1, ticketDesk.howManyTicketsAreLeft());
+        assertEquals(1, ticketDesk.howManyTicketsRemaining());
     }
 
     @Test
     public void getPassengersTicketDestination(){
         passenger1.buyTicket(Destination.IBIZA, ticketDesk);
-        assertEquals("Ibiza", passenger1.getPassengersTicketDestination().getDestination());
+        assertEquals("Ibiza", passenger1.getTicketDestination().getDestination());
+    }
+
+    @Test
+    public void backpackStartsEmpty(){
+        assertEquals(0, passenger1.lookInBackpack());
+    }
+
+    @Test public void backPackCanTakeIBuyables(){
+        passenger1.putThingsInBackpack(coffee1);
+        passenger1.putThingsInBackpack(sandwich1);
+        assertEquals(2, passenger1.lookInBackpack());
+    }
+
+    @Test
+    public void checkPassengerDrunkeness(){
+        assertEquals(10, passenger1.getBreathalysed());
     }
 
 }

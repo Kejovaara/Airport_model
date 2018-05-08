@@ -20,7 +20,7 @@ public class PlaneTest {
         plane = new Plane(2, Destination.TENERIFE);
         passenger1 = new Passenger(0,"Jean-Jacques");
         ticket1 = new Ticket(Destination.MAGALUF, 100.0);
-        passenger1.addATicket(ticket1);
+        passenger1.addTicket(ticket1);
         passenger2 = new Passenger(10,"Saddam");
         passenger3 = new Passenger(5,"Gaddafi");
     }
@@ -28,15 +28,15 @@ public class PlaneTest {
 
     @Test
     public void canReceivePassenger(){
-        plane.addAPassenger(passenger1);
+        plane.addPassenger(passenger1);
         assertEquals(1, plane.getPassengerList().size());
     }
 
     @Test
     public void canRemovePassenger(){
-        plane.addAPassenger(passenger1);
-        plane.addAPassenger(passenger2);
-        plane.RemoveAPassenger(passenger1);
+        plane.addPassenger(passenger1);
+        plane.addPassenger(passenger2);
+        plane.RemovePassenger(passenger1);
         assertEquals(1, plane.getPassengerList().size());
     }
 
@@ -57,9 +57,9 @@ public class PlaneTest {
 
     @Test
     public void passengerList__tooManyPassengers() {
-        plane.addAPassenger(passenger1);
-        plane.addAPassenger(passenger2);
-        plane.addAPassenger(passenger3);
+        plane.addPassenger(passenger1);
+        plane.addPassenger(passenger2);
+        plane.addPassenger(passenger3);
         assertEquals(2, plane.getPassengerList().size());
     }
 

@@ -45,7 +45,7 @@ public class AirportTest {
 
     @Test
     public void planeCanLeaveAirport(){
-        airport1.planeLeaveAirport(plane1);
+        airport1.planeLeavesAirport(plane1);
         assertEquals(2, airport1.getNumberOfPlanesInFleet());
     }
 

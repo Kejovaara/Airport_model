@@ -1,8 +1,5 @@
 package Airport;
 
-import Airport.Destination;
-import Airport.Ticket;
-
 import java.util.ArrayList;
 
 public class TicketDesk {
@@ -14,16 +11,16 @@ public class TicketDesk {
         this.ticketsForSale = ticketsForSale;
     }
 
-    public Ticket sellATicket(Destination destination){
+    public Ticket sellTicket(Destination destination){
         for (int i = 0; i < ticketsForSale.size(); i++) {
-            if (ticketsForSale.get(i).whatIsDestination() == destination){
+            if (ticketsForSale.get(i).getDestination() == destination){
                 return ticketsForSale.remove(i);
             }
         }
         return null;
     }
 
-    public int howManyTicketsAreLeft(){
+    public int howManyTicketsRemaining(){
         return this.ticketsForSale.size();
     }
 }

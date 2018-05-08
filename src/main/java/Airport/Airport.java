@@ -26,7 +26,7 @@ public class Airport {
         return fleet.size();
     }
 
-    public void planeLeaveAirport(Plane plane){
+    public void planeLeavesAirport(Plane plane){
         fleet.remove(plane);
     }
 

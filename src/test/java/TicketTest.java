@@ -18,7 +18,7 @@ public class TicketTest {
 
     @Test
     public void ticketHasDestination() {
-        assertEquals("Ibiza", ticket2.whatIsDestination().getDestination());
+        assertEquals("Ibiza", ticket2.getDestination().getDestination());
     }
 
 }

@@ -1,6 +1,5 @@
 package Airport;
 
-import Airport.Destination;
 import Airport.Person.Passenger;
 
 import java.util.ArrayList;
@@ -29,31 +28,21 @@ public class Plane {
         return passengerList;
     }
 
-    public void addAPassenger(Passenger passenger) {
+    public void addPassenger(Passenger passenger) {
         if (passengerList.size() < capacity) {
             passengerList.add(passenger);
         }
     }
 
-    public void RemoveAPassenger(Passenger passenger){
+    public void RemovePassenger(Passenger passenger){
         passengerList.remove(passenger);
     }
 
     public boolean checkPassengerHasCorrectTicketForPlane(Passenger passenger){
-        if (passenger.getPassengersTicketDestination() == destination){
+        if (passenger.getTicketDestination() == destination){
             return true;
         } else {
             return false;
         }
     }
-
-    //    public boolean checkPassengerTicketForPlane(Passenger passenger){
-//        for (int i = 0; i < ticketsForSale.size(); i++) {
-//            if (ticketsForSale.get(i).whatIsDestination() == destination){
-//                return ticketsForSale.remove(i);
-//            }
-//        }
-//        return null;
-//    }
-
 }

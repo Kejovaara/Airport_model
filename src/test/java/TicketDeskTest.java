@@ -24,8 +24,8 @@ public class TicketDeskTest {
 
     @Test
     public void canSellATicket(){
-        ticketDesk1.sellATicket(Destination.IBIZA);
-        assertEquals(1, ticketDesk1.howManyTicketsAreLeft());
+        ticketDesk1.sellTicket(Destination.IBIZA);
+        assertEquals(1, ticketDesk1.howManyTicketsRemaining());
     }
 
 }
